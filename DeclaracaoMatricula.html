@@ -17,12 +17,12 @@
     <body onload="window.print();">
         <div class="separator" style="clear: both; text-align: center;">
             <a href="https://4.bp.blogspot.com/-k2qN7BIt8IA/Wgdy0MIhlWI/AAAAAAAAAGQ/3Ij4rS8vv5cAy27KyZdbqBrTLNW45le3QCLcBGAs/s1600/BrasaoRepublica.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="615" data-original-width="575" height="100" src="https://4.bp.blogspot.com/-k2qN7BIt8IA/Wgdy0MIhlWI/AAAAAAAAAGQ/3Ij4rS8vv5cAy27KyZdbqBrTLNW45le3QCLcBGAs/s200/BrasaoRepublica.gif" width="93" /></a></div>
-        <p style="text-align:center;">MINISTÉRIO DA EDUCAÇÃO<br/>SECRETARIA DE EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA<br/>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DE MATO GROSSO<br/>CAMPUS CUIABÁ CEL. OCTAYDE JORGE DA SILVA<br/>DEPARTAMENTO DA ÁREA DE INFORMÁTICA</p>
+        <p style="text-align:center;">MINISTÉRIO DA EDUCAÇÃO<br/>SECRETARIA DE EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA<br/>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DE MATO GROSSO<br/>CAMPUS CUIABÁ CEL. OCTAYDE JORGE DA SILVA<br/>DEPARTAMENTO DE INFORMÁTICA</p>
         <hr />
         <p>&nbsp;</p>
-        <h1 style="text-align:center;text-transform:uppercase;">Declaração de Matrícula</h1>
+        <h1 style="text-align:center;text-transform:uppercase;">Atestado de Escolaridade</h1>
         <p>&nbsp;</p>
-        <p style="line-height:1.5;text-align: justify;font-size:14pt;">Declaramos para os devidos fins que o(a) aluno(a) <span id="nome" style="text-transform:uppercase;font-weight:bold;"></span>, matr&iacute;cula <span style="font-weight:bold;" id="matricula"></span>, encontra-se regularmente matriculado no Instituto Federal de Mato Grosso (IFMT) - Campus Cuiab&aacute;, no per&iacute;odo <span id="periodo" style="text-transform:uppercase;font-weight:bold;"></span> do Curso Superior de Tecnologia em <span style="font-weight:bold;">REDES DE COMPUTADORES</span>.</p>
+        <p style="line-height:1.5;text-align: justify;font-size:14pt;">Atestamos para os devidos fins que <span id="nome" style="text-transform:uppercase;font-weight:bold;"></span>, com matr&iacute;cula nº <span style="font-weight:bold;" id="matricula"></span>, nascido(a) em <span style="font-weight:bold;" id="nascimento"></span>, filho(a) de <span style="font-weight:bold;" id="mae"></span>, natural de <span style="font-weight:bold;" id="naturalidade"></span>, está matriculado(a) no <span style="font-weight:bold;" id="semestre"></span>º Período (Turma <span style="font-weight:bold;" id="turma"></span> <span style="font-weight:bold;" id="periodo"></span>), do Curso Superior de Tecnologia em <span style="font-weight:bold;">REDES DE COMPUTADORES</span>, nesta <span style="font-weight:bold;">Instituição Federal de Ensino</span>.</p>
         <p>&nbsp;</p>
         <p style="text-align: right;font-size:14pt;">Cuiab&aacute;, <script>document.write(diaExtenso());</script> de 2017.</p>
         <br />
@@ -41,11 +41,22 @@
             var periodo = paramList[2].split("=")[1];
             var cpf = paramList[3].split("=")[1];
             var validade = paramList[4].split("=")[1];
+            var nascimento = paramList[5].split("=")[1];
+            var mae = paramList[6].split("=")[1];
+            var natural = paramList[7].split("=")[1];
+            var semestre = paramList[8].split("=")[1];
+            var turma = paramList[9].split("=")[1];
             
             document.getElementById("nome").innerHTML=nome;
             document.getElementById("matricula").innerHTML=matricula;
             document.getElementById("periodo").innerHTML=periodo;
             document.getElementById("validade").innerHTML=validade;
+            document.getElementById("nascimento").innerHTML=nascimento;
+            document.getElementById("mae").innerHTML=mae;
+            document.getElementById("naturalidade").innerHTML=natural;
+            document.getElementById("semestre").innerHTML=semestre;
+            document.getElementById("turma").innerHTML=turma;
+            
         </script>
         
         <center><div id="qrcode"></div></center>
@@ -64,3 +75,4 @@
         <hr />
         <p style="text-align:center;font-size:10pt;">Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso - Campus Cuiabá Cel. Octayde Jorge da Silva<br />Rua Profa. Zulmira Canavarros, 95 - CEP: 78005-200<br />Telefone: (65) 3318-1403<br/>Cuiabá/MT</p>
     </body>
+    
